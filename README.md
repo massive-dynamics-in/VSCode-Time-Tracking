@@ -16,6 +16,10 @@ Keep track of time locally on your machine. This extension tracks the time spent
 
 ## Release Notes
 
+### 0.0.3
+
+- Now the download file will have default date and time in the name.
+
 ### 0.0.2
 
 - To download the data, click on 'Download Tracked Time' in the status bar ( bottom right corner).

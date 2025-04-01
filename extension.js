@@ -121,10 +121,24 @@ function activate(context) {
 		
 		if (fs.existsSync(filePath)) {
 			vscode.window.showSaveDialog({
-				defaultUri: vscode.Uri.file(filePath),
+				// defaultUri: vscode.Uri.file(filePath),
+				// defaultUri: vscode.Uri.file(path.join(__dirname, `time_tracker_${new Date().toISOString().slice(0, 10)}.csv`)),
+				// defaultUri: vscode.Uri.file(path.join(__dirname, `time_tracker_${new Date().toLocaleDateString()}_${new Date().toLocaleTimeString()}.csv`)),
+				defaultUri: vscode.Uri.file(path.join(__dirname, `time_tracker_${new Date().toLocaleString('en-GB', {
+					year: 'numeric',
+					month: '2-digit',
+					day: '2-digit',
+					hour: '2-digit',
+					minute: '2-digit',
+					second: '2-digit',
+					hour12: false
+				}).replace(/[/, ]/g, '-').replace(/:/g, '-')}.csv`)),
 				filters: { 'CSV Files': ['csv'] }
 			}).then(saveUri => {
 				if (saveUri) {
+
+					console.log(saveUri.fsPath);
+
 					// Copy the file to the selected location
 					fs.copyFileSync(filePath, saveUri.fsPath);
 					vscode.window.showInformationMessage('File saved successfully!');
