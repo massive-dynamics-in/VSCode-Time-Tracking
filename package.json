@@ -1,7 +1,8 @@
 {
-  "name": "vscode-time-tracker",
+  "name": "vscode-time-tracker-folder-based",
   "displayName": "VSCode Time Tracker",
   "description": "Folder based time tracking",
+  "publisher": "MASSIVEDYNAMICS",
   "repository": {
     "url": "https://github.com/massive-dynamics-in/VSCode-Time-Tracking.git"
   },
