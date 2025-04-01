@@ -2,6 +2,9 @@
   "name": "vscode-time-tracker",
   "displayName": "VSCode Time Tracker",
   "description": "Folder based time tracking",
+  "repository": {
+    "url": "https://github.com/massive-dynamics-in/VSCode-Time-Tracking.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.98.0"
